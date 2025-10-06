@@ -1,0 +1,55 @@
+#div-fondo {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#div-fondo::before {
+    content: "";
+    position: absolute;
+    top: -12%;
+    left: -12%;
+    width: 124%;
+    height: 124%;
+    background-attachment: fixed;
+    background-image:
+        linear-gradient(48deg, rgb(154, 94, 11) 0%, rgb(154, 94, 11) 35%, rgb(239, 116, 49) 35%, rgb(239, 116, 49) 55%, rgb(238, 140, 73) 55%, rgb(238, 140, 73) 60%, rgb(237, 165, 98) 60%, rgb(237, 165, 98) 72%, rgb(235, 189, 122) 72%, rgb(235, 189, 122) 77%, rgb(234, 213, 147) 77%, rgb(234, 213, 147) 92%, rgb(233, 237, 171) 92%, rgb(233, 237, 171) 100%),
+        linear-gradient(3deg, rgb(154, 94, 11) 0%, rgb(154, 94, 11) 35%, rgb(239, 116, 49) 35%, rgb(239, 116, 49) 55%, rgb(238, 140, 73) 55%, rgb(238, 140, 73) 60%, rgb(237, 165, 98) 60%, rgb(237, 165, 98) 72%, rgb(235, 189, 122) 72%, rgb(235, 189, 122) 77%, rgb(234, 213, 147) 77%, rgb(234, 213, 147) 92%, rgb(233, 237, 171) 92%, rgb(233, 237, 171) 100%),
+        linear-gradient(67.5deg, rgb(154, 94, 11) 0%, rgb(154, 94, 11) 35%, rgb(239, 116, 49) 35%, rgb(239, 116, 49) 55%, rgb(238, 140, 73) 55%, rgb(238, 140, 73) 60%, rgb(237, 165, 98) 60%, rgb(237, 165, 98) 72%, rgb(235, 189, 122) 72%, rgb(235, 189, 122) 77%, rgb(234, 213, 147) 77%, rgb(234, 213, 147) 92%, rgb(233, 237, 171) 92%, rgb(233, 237, 171) 100%),
+        linear-gradient(22.5deg, rgb(154, 94, 11) 0%, rgb(154, 94, 11) 35%, rgb(239, 116, 49) 35%, rgb(239, 116, 49) 55%, rgb(238, 140, 73) 55%, rgb(238, 140, 73) 60%, rgb(237, 165, 98) 60%, rgb(237, 165, 98) 72%, rgb(235, 189, 122) 72%, rgb(235, 189, 122) 77%, rgb(234, 213, 147) 77%, rgb(234, 213, 147) 92%, rgb(233, 237, 171) 92%, rgb(233, 237, 171) 100%),
+        linear-gradient(93deg, rgb(139, 187, 224), rgb(252, 182, 229));
+    background-blend-mode: overlay, overlay, overlay, overlay, normal;
+    z-index: -1;
+    animation: pulso-exagerado 6s ease-in-out infinite;
+}
+
+@keyframes pulso-exagerado {
+    0% {
+        transform: scale(1);
+        filter: blur(3px) brightness(1);
+    }
+    20% {
+        transform: scale(1.05);
+        filter: blur(5px) brightness(1.07);
+    }
+    40% {
+        transform: scale(1.08);
+        filter: blur(7px) brightness(1.12);
+    }
+    60% {
+        transform: scale(1.06);
+        filter: blur(6px) brightness(1.1);
+    }
+    80% {
+        transform: scale(1.04);
+        filter: blur(4.5px) brightness(1.05);
+    }
+    100% {
+        transform: scale(1);
+        filter: blur(3px) brightness(1);
+    }
+}
