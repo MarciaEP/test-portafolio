@@ -1,6 +1,6 @@
 //Escribe el texto de pagina incio
 
-const texto = '<label...>\n...\n<input...\n   type="front"\n   class="dev"\n   name="Marcy"\n   required>';
+const texto = '<input...\n   type="front"\n   class="dev"\n   name="Marcy"\n ...>';
 const contenedor = document.getElementById("div-intro");
 const btnHired = document.getElementById("btn-hired");
 
@@ -23,6 +23,7 @@ function escribir() {
 }
 
 escribir();
+
 
 
 
