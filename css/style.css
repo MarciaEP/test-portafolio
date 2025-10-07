@@ -6,21 +6,3 @@ body{
     justify-content: center;
 }
 
-#div-intro{
-    width: 200px;
-  font-family: monospace;
-  white-space: pre-wrap;
-}
-
-#cursor {
-  display: inline-block;
-  width: 10px;
-  background-color: black;
-  animation: parpadear 0.7s infinite;
- 
-}
-
-@keyframes parpadear {
-  0%, 50%, 100% { opacity: 1; }
-  25%, 75% { opacity: 0; }
-}
