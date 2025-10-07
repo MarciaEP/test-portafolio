@@ -1,33 +1,48 @@
+/*
+*imagen fondo inicio con movimiento
+*/
+
+:root {
+    --c1: #c29c67;
+    --c2: rgba(209, 188, 117, 0.616);
+    --c3: rgb(231, 142, 82);
+    --c4: rgba(218, 181, 148, 0.445);
+    --c5: rgb(235, 248, 199);
+    --c6: rgba(219, 198, 127, 0.164);
+    --c7: rgb(187, 190, 135);
+    --c8: rgb(20, 56, 214);
+    --c9: rgb(214, 151, 100);
+}
+
 #div-fondo {
-    position: relative;
-    height: 100%;
-    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 1;
+    position: relative;
+    height: 100%;
+    width: 100%;
     overflow: hidden;
 }
 
 #div-fondo::before {
     content: "";
     position: absolute;
-    top: -12%;
-    left: -12%;
-    width: 124%;
-    height: 124%;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
     background-attachment: fixed;
     background-image:
-        linear-gradient(48deg, rgb(154, 94, 11) 0%, rgb(154, 94, 11) 35%, rgb(239, 116, 49) 35%, rgb(239, 116, 49) 55%, rgb(238, 140, 73) 55%, rgb(238, 140, 73) 60%, rgb(237, 165, 98) 60%, rgb(237, 165, 98) 72%, rgb(235, 189, 122) 72%, rgb(235, 189, 122) 77%, rgb(234, 213, 147) 77%, rgb(234, 213, 147) 92%, rgb(233, 237, 171) 92%, rgb(233, 237, 171) 100%),
-        linear-gradient(3deg, rgb(154, 94, 11) 0%, rgb(154, 94, 11) 35%, rgb(239, 116, 49) 35%, rgb(239, 116, 49) 55%, rgb(238, 140, 73) 55%, rgb(238, 140, 73) 60%, rgb(237, 165, 98) 60%, rgb(237, 165, 98) 72%, rgb(235, 189, 122) 72%, rgb(235, 189, 122) 77%, rgb(234, 213, 147) 77%, rgb(234, 213, 147) 92%, rgb(233, 237, 171) 92%, rgb(233, 237, 171) 100%),
-        linear-gradient(67.5deg, rgb(154, 94, 11) 0%, rgb(154, 94, 11) 35%, rgb(239, 116, 49) 35%, rgb(239, 116, 49) 55%, rgb(238, 140, 73) 55%, rgb(238, 140, 73) 60%, rgb(237, 165, 98) 60%, rgb(237, 165, 98) 72%, rgb(235, 189, 122) 72%, rgb(235, 189, 122) 77%, rgb(234, 213, 147) 77%, rgb(234, 213, 147) 92%, rgb(233, 237, 171) 92%, rgb(233, 237, 171) 100%),
-        linear-gradient(22.5deg, rgb(154, 94, 11) 0%, rgb(154, 94, 11) 35%, rgb(239, 116, 49) 35%, rgb(239, 116, 49) 55%, rgb(238, 140, 73) 55%, rgb(238, 140, 73) 60%, rgb(237, 165, 98) 60%, rgb(237, 165, 98) 72%, rgb(235, 189, 122) 72%, rgb(235, 189, 122) 77%, rgb(234, 213, 147) 77%, rgb(234, 213, 147) 92%, rgb(233, 237, 171) 92%, rgb(233, 237, 171) 100%),
-        linear-gradient(93deg, rgb(139, 187, 224), rgb(252, 182, 229));
+        linear-gradient(48deg, var(--c1) 0%, var(--c1) 35%, var(--c2) 35%, var(--c2) 55%, var(--c3) 55%, var(--c3) 60%, var(--c4) 60%, var(--c4) 72%, var(--c5) 72%, var(--c5) 77%, var(--c6) 77%, var(--c6) 92%, var(--c7) 92%, var(--c7) 100%),
+        linear-gradient(3deg, var(--c1) 0%, var(--c1) 35%, var(--c2) 35%, var(--c2) 55%, var(--c3) 55%, var(--c3) 60%, var(--c4) 60%, var(--c4) 72%, var(--c5) 72%, var(--c5) 77%, var(--c6) 77%, var(--c6) 92%, var(--c7) 92%, var(--c7) 100%),
+        linear-gradient(67.5deg, var(--c1) 0%, var(--c1) 35%, var(--c2) 35%, var(--c2) 55%, var(--c3) 55%, var(--c3) 60%, var(--c4) 60%, var(--c4) 72%, var(--c5) 72%, var(--c5) 77%, var(--c6) 77%, var(--c6) 92%, var(--c7) 92%, var(--c7) 100%),
+        linear-gradient(22.5deg, var(--c1) 0%, var(--c1) 35%, var(--c2) 35%, var(--c2) 55%, var(--c3) 55%, var(--c3) 60%, var(--c4) 60%, var(--c4) 72%, var(--c5) 72%, var(--c5) 77%, var(--c6) 77%, var(--c6) 92%, var(--c7) 92%, var(--c7) 100%),
+        linear-gradient(93deg, var(--c8), var(--c9));
     background-blend-mode: overlay, overlay, overlay, overlay, normal;
-    z-index: -1;
-    animation: pulso-exagerado 6s ease-in-out infinite;
+    animation: pulso 6s ease-in-out infinite;
 }
 
-@keyframes pulso-exagerado {
+@keyframes pulso {
     0% {
         transform: scale(1);
         filter: blur(3px) brightness(1);
@@ -53,3 +68,24 @@
         filter: blur(3px) brightness(1);
     }
 }
+/**/
+/* animacion letras inicio*/
+#div-intro{
+  width: 200px;
+  font-family: monospace;
+  white-space: pre-wrap;
+  position: relative;
+  z-index: 3;
+}
+#cursor {
+  display: inline-block;
+  width: 10px;
+  background-color: black;
+  animation: parpadear 0.7s infinite;
+}
+@keyframes parpadear {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
+/**/
+
