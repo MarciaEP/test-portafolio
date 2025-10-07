@@ -1,9 +1,4 @@
-  function mostrarMensaje() {
-            alert("¡Hola estamos funcionando!");
-        }
-
-
-//
+//Escribe el texto de pagina incio
 
 const texto = '<input...>\n...\n<input...\n   type="front-end"\n   class="developer"\n   name="Marcy"\n   required>';
 const contenedor = document.getElementById("div-intro");
@@ -22,3 +17,4 @@ function escribir() {
 }
 
 escribir();
+
