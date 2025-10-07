@@ -17,12 +17,13 @@ function escribir() {
   } else {
     btnHired.style.display = "inline-block"; // Muestra el botón al terminar
     btnHired.addEventListener("click", () => {
-    window.location.href = "pages/main.html";
+    window.location.href = "/pages/main.html";
 });
   }
 }
 
 escribir();
+
 
 
 
