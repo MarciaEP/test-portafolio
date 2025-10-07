@@ -1,6 +1,6 @@
 //Escribe el texto de pagina incio
 
-const texto = '<input...>\n...\n<input...\n   type="front-end"\n   class="developer"\n   name="Marcy"\n   required>';
+const texto = '<label...>\n...\n<input...\n   type="front"\n   class="dev"\n   name="Marcy"\n   required>';
 const contenedor = document.getElementById("div-intro");
 
 let i = 0;
